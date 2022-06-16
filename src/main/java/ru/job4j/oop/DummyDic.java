@@ -9,6 +9,5 @@ public class DummyDic {
         DummyDic first = new DummyDic();
         String say = first.engToRus("Potato");
         System.out.println(say);
-
     }
 }
