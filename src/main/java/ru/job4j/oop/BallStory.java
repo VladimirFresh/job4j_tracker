@@ -4,10 +4,10 @@ public class BallStory {
     public static void main(String[] args) {
         Ball ball = new Ball();
         Hare hare = new Hare();
-        ball.tryRun(false);
         Wolf wolf = new Wolf();
-        ball.tryRun(false);
         Fox fox = new Fox();
-        ball.tryRun(true);
+        hare.tryEat(ball);
+        wolf.tryEat(ball);
+        fox.tryEat(ball);
     }
 }
