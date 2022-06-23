@@ -3,7 +3,6 @@ package ru.job4j.oop;
 import org.junit.Assert;
 import org.junit.Test;
 
-
 public class PointTest {
 
     @Test
@@ -23,5 +22,4 @@ public class PointTest {
         double expected = 4;
         Assert.assertEquals(expected, dist, 0.001);
     }
-
 }
