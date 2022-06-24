@@ -13,7 +13,7 @@ public class Calculator {
     }
 
     public static int minus(int c) {
-        return Math.abs(x - c);
+        return c - x;
     }
 
     public int divide(int d) {
@@ -27,16 +27,14 @@ public class Calculator {
     public static void main(String[] args) {
         int resultSum = Calculator.sum(10);
         System.out.println(resultSum);
-        Calculator multi = new Calculator();
-        int resultMulti = multi.multiply(10);
+        Calculator calculator = new Calculator();
+        int resultMulti = calculator.multiply(10);
         System.out.println(resultMulti);
         int resultMinus = Calculator.minus(10);
         System.out.println(resultMinus);
-        Calculator div = new Calculator();
-        int resultDiv = div.divide(10);
+        int resultDiv = calculator.divide(10);
         System.out.println(resultDiv);
-        Calculator sum = new Calculator();
-        int resultSumAll = sum.sumAllOperation(10);
+        int resultSumAll = calculator.sumAllOperation(10);
         System.out.println(resultSumAll);
 
     }
