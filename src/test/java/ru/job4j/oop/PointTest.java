@@ -22,4 +22,13 @@ public class PointTest {
         double expected = 4;
         Assert.assertEquals(expected, dist, 0.001);
     }
+
+    @Test
+    public void when307To548Then4dot58() {
+        Point first = new Point(3, 0, 7);
+        Point second = new Point(5, 4, 8);
+        double dist = first.distance3d(second);
+        double expected = 4.58;
+        Assert.assertEquals(expected, dist, 0.01);
+    }
 }
