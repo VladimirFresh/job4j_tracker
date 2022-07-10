@@ -28,15 +28,15 @@ public class Tracker {
 
     public Item[] findByName(String key) {
         Item[] rsl = new Item[size];
-        int lenght = 0;
+        int len = 0;
         for (int index = 0; index < size; index++) {
             Item item = items[index];
             if (item.getName().equals(key)) {
-                lenght++;
+                len++;
                 rsl[index] = items[index];
             }
         }
-        rsl = Arrays.copyOf(items, lenght);
+        rsl = Arrays.copyOf(items, len);
         return rsl;
     }
 
