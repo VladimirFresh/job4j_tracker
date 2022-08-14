@@ -6,8 +6,8 @@ public class ExitAction implements UserAction {
     public ExitAction(Output out) {
         this.out = out;
     }
-    boolean run = true;
 
+    boolean run = true;
 
     @Override
     public String name() {
