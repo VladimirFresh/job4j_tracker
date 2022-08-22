@@ -31,15 +31,11 @@ public class ValidateInputTest {
     public void whenDoubleValidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1"}
-        );
-        Input in1 = new StubInput(
-                new String[] {"2"}
+                new String[] {"1", "2"}
         );
         ValidateInput input = new ValidateInput(out, in);
-        ValidateInput input1 = new ValidateInput(out, in1);
         int selected = input.askInt("Enter menu:");
-        int selected2 = input1.askInt("Enter menu:");
+        int selected2 = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(1);
         assertThat(selected2).isEqualTo(2);
     }
