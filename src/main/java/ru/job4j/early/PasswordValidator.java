@@ -5,26 +5,9 @@ import static java.lang.Character.*;
 
 public class PasswordValidator {
 
-    public static class ValidatorResult {
-
-        public enum Status {
-            VALID, INVALID
-        }
-
-        public Status status;
-
-        public String message;
-
-        public ValidatorResult(Status status, String message) {
-            this.status = status;
-            this.message = message;
-        }
-
-    }
-
     public static ValidatorResult validate(String password) {
 
-        if (password.length() < 1) {
+        if (password == null) {
             throw new IllegalArgumentException("Password cannot be null");
         }
         String[] tooSimplePassword = new String[] {"qwerty", "admin", "user", "password", "12345"};
@@ -53,6 +36,8 @@ public class PasswordValidator {
                 digit = true;
             } else if (!isLetterOrDigit(sym)) {
                 spec = true;
+            } else if (uppercase && lowercase && digit && spec) {
+                break;
             }
         }
 
